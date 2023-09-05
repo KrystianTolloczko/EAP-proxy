@@ -1,6 +1,6 @@
 # About
 
-This repository includes my notes on enabling a true bridge mode setup with AT&T U-Verse and EdgeMax router. This method utilizes [netgraph](https://www.freebsd.org/cgi/man.cgi?netgraph(4)) which is a graph based kernel networking subsystem of FreeBSD. This low-level solution was required to account for the unique issues surrounding bridging 802.1X traffic and tagging a VLAN with an id of 0. I've tested and confirmed this setup works with AT&T U-Verse Internet on the ARRIS NVG589, NVG599 and BGW210-700 residential gateways (probably others too). For Pace 5268AC see special details below.
+This repository includes my notes on enabling a true bridge mode setup with AT&T U-Verse. This method utilizes [netgraph](https://www.freebsd.org/cgi/man.cgi?netgraph(4)) which is a graph based kernel networking subsystem of FreeBSD. This low-level solution was required to account for the unique issues surrounding bridging 802.1X traffic and tagging a VLAN with an id of 0. I've tested and confirmed this setup works with AT&T U-Verse Internet on the ARRIS NVG589, NVG599 and BGW210-700 residential gateways (probably others too). For Pace 5268AC see special details below.
 
 There are a few other methods to accomplish true bridge mode, so be sure to see what easiest for you. True Bridge Mode is also possible in a Linux via ebtables or using hardware with a VLAN swap trick. For me, I was not using a Linux-based router and the VLAN swap did not seem to work for me.
 
@@ -318,6 +318,7 @@ See [U-VERSE_TV.md](U-VERSE_TV.md)
 
 # References
 
+- https://github.com/jaysoffian/eap_proxy (FORK)
 - http://blog.0xpebbles.org/Bypassing-At-t-U-verse-hardware-NAT-table-limits
 - https://forum.netgate.com/topic/99190/att-uverse-rg-bypass-0-2-btc/
 - http://www.dslreports.com/forum/r29903721-AT-T-Residential-Gateway-Bypass-True-bridge-mode
