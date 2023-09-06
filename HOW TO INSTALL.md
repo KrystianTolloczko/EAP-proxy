@@ -25,6 +25,7 @@ Copy eap_proxy.py to /config/scripts/eap_proxy.py
 Change permitions to these files
 
 EXAMPLE:
+```
 ssh ubnt@192.168.1.1 mkdir -p /config/scripts /config/scripts/post-config.d
 scp /Downloads/EAP_PROXY/eap_proxy.py ubnt@192.168.1.1:/config/scripts/
 scp /Downloads/EAP_PROXY/eap_proxy.sh ubnt@192.168.1.1:/config/scripts/post-config.d/
@@ -32,6 +33,7 @@ ssh ubnt@192.168.1.1 chown ubnt:vyattacfg /config/scripts/eap_proxy.py
 ssh ubnt@192.168.1.1 chown ubnt:vyattacfg /config/scripts/post-config.d/eap_proxy.sh
 ssh ubnt@192.168.1.1 chmod 755 /config/scripts/eap_proxy.py
 ssh ubnt@192.168.1.1 chmod 755 /config/scripts/post-config.d/eap_proxy.sh
+```
 
 5. Now reboot and run basic config   
 
@@ -39,6 +41,7 @@ ssh ubnt@192.168.1.1 chmod 755 /config/scripts/post-config.d/eap_proxy.sh
 #BASIC EDGEMAX CONFIG FOR EAP PROXY
 ##################################################################################
 
+```
 ssh ubnt@192.168.1.1
 configure
 
@@ -205,5 +208,5 @@ set firewall ipv6-receive-redirects disable
 set firewall ipv6-src-route disable
 
 commit ; save
-
+```
 After reboot EAP should work as gold !!!!!!!!! :)
